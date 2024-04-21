@@ -1,0 +1,17 @@
+<p>sekcja 2 - obrazy</p>
+<button (click)="left()">lewo</button>
+<button (click)="middle()">środek</button>
+<button (click)="right()">prawo</button>
+<br>
+<button (click)="small()">mały</button>
+<button (click)="medium()">średni</button>
+<button (click)="big()">duży</button>
+<br>
+<button (click)="vanishh()">zniknij</button>
+
+
+{{align}}
+<div class="pojemnik" [ngClass]="{'vanish' : vanish}" [ngStyle]="{'align-items': align, 'justify-content': align}">
+    <img src="./assets/katz.jpg"  [ngStyle]="{'height': size}">
+
+</div>

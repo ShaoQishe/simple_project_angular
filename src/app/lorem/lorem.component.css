@@ -1,0 +1,48 @@
+.pola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2x solid black;
+}
+.pola div {
+
+
+
+    margin: 0 1%;
+}
+
+
+textarea
+{
+
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    /*margin: -10px;
+    margin-top:0.5px;*/
+    resize: none;
+}
+
+
+header
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.pic > img
+{
+    height : 50px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}

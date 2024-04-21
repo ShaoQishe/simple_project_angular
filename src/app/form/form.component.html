@@ -1,0 +1,8 @@
+<p>form works!</p>
+<form (ngSubmit)="onSubmit()">
+    
+     <input type="text" name="name" [(ngModel)]="name" placeholder="Imię" class="border border-gray-300" required>
+    <button type="submit" class="border border-gray-300">Wyślij</button>
+  </form>
+  {{name}}
+  

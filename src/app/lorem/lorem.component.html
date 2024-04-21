@@ -1,0 +1,27 @@
+<header class="flex justify-center items-center">
+    <h2>Tłumacz polsko-niemiecki</h2>
+    <select [(ngModel)]="selected" (change)="pair()" class="border border-gray-300">
+      <option *ngFor="let lang of languages" [value]="lang.name">{{lang.name}}</option>
+    </select>
+    {{ language }}
+  </header>
+  
+  <div class="flex justify-center items-center mb-10">
+    <img *ngIf="selected == 'de'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/de.png" alt="German flag">
+    <img *ngIf="selected == 'en'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/en.png" alt="English flag">
+    <img *ngIf="selected == 'fr'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/fr.png" alt="French flag">
+    <img *ngIf="selected == 'jpn'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/jpn.png" alt="Japanese flag">
+    <img *ngIf="selected == 'chi'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/chi.png" alt="Chinese flag">
+    <img *ngIf="selected == 'ru'" class="h-10 w-10 rounded-full border border-gray-300 mr-2" src="./assets/ru.png" alt="Russian flag">
+  </div>
+  
+  <div class="flex justify-center items-center">
+    <div class="m-7">
+      <textarea [(ngModel)]="input" (keyup)="translate()" rows="23" cols="45" class="p-4 rounded-lg focus:outline-none border border-gray-300 resize-none" placeholder="Wpisz tekst do przetłumaczenia z polskiego na {{language | lowercase}}" autofocus></textarea>
+    </div>
+    <div class="m-7">
+      <textarea name="tekst" id="tltekst" rows="23" cols="45" class="p-4 rounded-lg focus:outline-none border border-gray-300 resize-none" placeholder="{{description}}" readonly>{{output}}</textarea>
+    </div>
+</div>
+  
+  
